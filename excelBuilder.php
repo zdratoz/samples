@@ -15,7 +15,7 @@ $totalRows = $_POST['totalRecords'];
 $group = $_POST['group'];
 $limit = $_POST['limit'];
 $file_pref = $_POST['file_pref'];
-gc_collect_cycles();
+ 
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
@@ -122,7 +122,7 @@ export($spreadsheet, $table, $file_pref);
 
 header('Content-type: application/json');
 $response_array['count'] = $file_pref;
-echo json_encode($response_array);
+ 
 
 function insert($sheet, $rows, $headers,   $group, $headerStyle, $dateStyle, $groupStyle)
 {
